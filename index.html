@@ -7,19 +7,49 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px 0 10px 0;
+      margin: 0;
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin: 20px 0 10px 0;
+      padding-left: 20px;
+    }
+
+    .map-container {
+      height: 90vh;
+      padding: 0 20px 40px 20px;
     }
 
     iframe {
-      flex: 1;
+      width: 100%;
+      height: 100%;
       border: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <iframe src="stockholm_hotspots_map.html" title="Polygon Hotspots Map"></iframe>
-  <iframe src="crime_heatmap_stockholm.html" title="Heatmap View"></iframe>
+
+  <h1>Crime Hotspots — Stockholm</h1>
+
+  <h2>📍 Polygon Hotspots (Named Areas)</h2>
+  <div class="map-container">
+    <iframe src="stockholm_hotspots_map.html" title="Polygon Hotspots Map"></iframe>
+  </div>
+
+  <h2>🔥 Heatmap View (Based on Density)</h2>
+  <div class="map-container">
+    <iframe src="crime_heatmap_stockholm.html" title="Heatmap View"></iframe>
+  </div>
+
 </body>
 </html>
